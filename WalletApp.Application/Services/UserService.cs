@@ -28,11 +28,9 @@ namespace WalletApp.Application.Services
             await _uow.SaveAsync();
         }
 
-        public async Task<List<UserBaseModels>> GetListOfUserAsync()
+        public async Task<List<User>> GetListOfUserAsync()
         {
-            return await _uow.User.CustomQuery()
-                .ProjectTo<UserBaseModels>(_mapper.ConfigurationProvider)
-                .ToListAsync();
+            return await _uow.User.CustomQuery().ToListAsync();
         }
     }
 }

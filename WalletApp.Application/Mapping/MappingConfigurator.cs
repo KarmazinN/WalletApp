@@ -35,6 +35,8 @@ namespace WalletApp.Application.Mapping
 
             CreateMap<User, BaseModel>();
 
+            CreateMap<BaseModel, User>();
+
         }
     }
 }
