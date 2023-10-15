@@ -11,7 +11,7 @@ namespace WalletApp.Application.Interfaces
     public interface IUserService
     {
         public Task CreateUserAsync(CreateUserModel model);
-        public Task<List<UserBaseModels>> GetListOfUserAsync();
+        public Task<List<User>> GetListOfUserAsync();
 
     }
 }
